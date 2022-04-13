@@ -1,6 +1,7 @@
+<h1><%= title %></h1>
 <ul>
-  <% if (bookinstance_list) { %> <% bookinstance_list.forEach(bookInstance => {
-  %>
+  <% if (bookinstance_list.length !== 0) { %> <%
+  bookinstance_list.forEach(bookInstance => { %>
   <li>
     <a href="<%= bookInstance.url %>"> <%= bookInstance.book.title %> </a> : <%=
     bookInstance.imprint %> - <% if (bookInstance.status === 'Available') { %>
